@@ -13,3 +13,7 @@ app.use('/api/payment', async (req, res) => {
   res.send('Payment received')
 
 })
+
+app.listen(port, () => {
+  console.log(`Server-2 running on port ${port}`)
+})

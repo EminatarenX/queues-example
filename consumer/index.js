@@ -7,8 +7,14 @@ const queue = 'payments'
 await channel.assertQueue(queue, { durable: false })
 
 channel.consume(queue, async (payment) => {
-  console.log('Payment received: ', payment)
-  await axios.post('http://localhost:3001/api/payment', JSON.parse(payment))
-
-
+  console.log('Payment received: ', payment.content.toString())
+  try {
+    const pay = payment.content.toString()
+    console.log(JSON.parse(pay))
+     await axios.post('http://localhost:3001/api/payment', JSON.parse(pay))
+  
+    console.log('Payment processed')
+  } catch (error) {
+    console.log(error)
+  }
 })
