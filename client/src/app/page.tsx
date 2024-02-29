@@ -19,7 +19,7 @@ export default function Home() {
     };
    
 
-    const response = await fetch("http://localhost:3000/api/payment", {
+    const response = await fetch("http://34.206.25.41:3000/api/payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!socket) {
-      socket = io("http://localhost:3002");
+      socket = io("http://34.206.25.41:3002");
       socket.on("payment-processed", (payment) => {
         console.log(payment);
         toast.success('Payment confirmed!')

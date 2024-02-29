@@ -8,7 +8,7 @@ const port: number = 3002
 
 app.use(express.json())
 app.use(cors({
-  origin: ['http://localhost:4000']
+  origin: ['http://34.206.25.41:4000']
 }))
 
 const server = app.listen(port, () => {
@@ -18,7 +18,7 @@ const server = app.listen(port, () => {
 const io: Server = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: ["http://localhost:4000"]
+    origin: ["http://34.206.25.41:4000"]
   }
 })
 

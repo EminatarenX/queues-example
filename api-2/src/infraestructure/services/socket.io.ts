@@ -5,7 +5,7 @@ export class SocketIO implements ISocketIOInterface {
   private socket: any
 
   constructor() {
-    this.socket = socketClient('http://localhost:3002')
+    this.socket = socketClient('http://34.206.25.41:3002')
   }
 
   emit(event: string, data: any) {

@@ -6,7 +6,7 @@ export class Server {
   constructor() {
     this.app = express(); 
     this.app.use(cors({
-      origin: ['http://localhost:4000']
+      origin: ['http://34.206.25.41:4000']
     }))
     this.app.use(express.json());
     this.app.use('/api/payment', paymentRouter)

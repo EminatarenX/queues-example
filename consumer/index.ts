@@ -21,7 +21,7 @@ async function consumeMessages() {
       if (payment) {
         const paymentContent = payment.content.toString()
         
-        await axios.post('http://localhost:3001/api/payment', JSON.parse(paymentContent));
+        await axios.post('http://34.206.25.41:3001/api/payment', JSON.parse(paymentContent));
         console.log('Payment processed');
         await channel.publish(exchangeName, 'payment-processed', Buffer.from(payment.content.toString()));
         await channel.ack(payment);
