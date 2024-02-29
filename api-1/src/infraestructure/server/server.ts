@@ -1,10 +1,14 @@
 import express from 'express';
 import paymentRouter from '../payment/payment.routes';
-
+import cors from 'cors'
 export class Server {
   private readonly app: express.Express;
   constructor() {
-    this.app = express(); this.app.use(express.json());
+    this.app = express(); 
+    this.app.use(cors({
+      origin: ['http://localhost:4000']
+    }))
+    this.app.use(express.json());
     this.app.use('/api/payment', paymentRouter)
   }
 

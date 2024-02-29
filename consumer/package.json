@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "tsnd --respawn index.ts"
+    "dev": "tsnd --respawn index.ts",
+    "start": "node build/index.js"
   },
   "dependencies": {
     "amqplib": "^0.10.3",
