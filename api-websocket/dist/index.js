@@ -10,7 +10,7 @@ const app = (0, express_1.default)();
 const port = 3002;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({
-    origin: ['http://localhost:4000']
+    origin: ['http://34.206.25.41:4000']
 }));
 const server = app.listen(port, () => {
     console.log('api-websocket is running on port 3002');
@@ -18,7 +18,7 @@ const server = app.listen(port, () => {
 const io = new socket_io_1.Server(server, {
     pingTimeout: 60000,
     cors: {
-        origin: ["http://localhost:4000"]
+        origin: ["http://34.206.25.41:4000"]
     }
 });
 io.on('connection', socket => {

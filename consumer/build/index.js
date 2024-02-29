@@ -26,7 +26,7 @@ function consumeMessages() {
             try {
                 if (payment) {
                     const paymentContent = payment.content.toString();
-                    yield axios_1.default.post('http://localhost:3001/api/payment', JSON.parse(paymentContent));
+                    yield axios_1.default.post('http://34.206.25.41:3001/api/payment', JSON.parse(paymentContent));
                     console.log('Payment processed');
                     yield channel.publish(exchangeName, 'payment-processed', Buffer.from(payment.content.toString()));
                     yield channel.ack(payment);

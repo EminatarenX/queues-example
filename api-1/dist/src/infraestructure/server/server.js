@@ -11,7 +11,7 @@ class Server {
     constructor() {
         this.app = (0, express_1.default)();
         this.app.use((0, cors_1.default)({
-            origin: ['http://localhost:4000']
+            origin: ['http://34.206.25.41:4000']
         }));
         this.app.use(express_1.default.json());
         this.app.use('/api/payment', payment_routes_1.default);
