@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "tsnd --respawn index.ts",
-    "start": "node dist/index.js"
+    "dev": "tsnd --respawn src/index.ts",
+    "start": "node build/index.js"
   },
   "dependencies": {
     "@types/cors": "^2.8.17",

@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "tsnd --respawn main.ts",
-    "start": "node dist/main.js"
+    "dev": "tsnd --respawn src/main.ts",
+    "start": "node build/main.js"
   },
   "dependencies": {
     "@prisma/client": "5.10.2",

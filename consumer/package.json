@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "tsnd --respawn index.ts",
+    "dev": "tsnd --respawn src/index.ts",
     "start": "node build/index.js"
   },
   "dependencies": {
